@@ -7,7 +7,7 @@
   class="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#121413]"
 >
   <!-- Grid de precisión -->
-  <div class="absolute inset-0 z-0 grid-precision opacity-40"></div>
+  <div class="hero-bg-grid absolute inset-0 z-0 grid-precision opacity-0"></div>
 
   <!-- Líneas estructurales -->
   <div class="absolute inset-0 z-[1] pointer-events-none hidden lg:block">
@@ -35,9 +35,11 @@
     class="relative z-10 max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center w-full gap-16 lg:gap-20"
   >
     <!-- Left: Text -->
-    <div class="lg:w-1/2 space-y-10 text-center lg:text-left relative z-20">
+    <div
+      class="hero-text-content lg:w-1/2 space-y-10 text-center lg:text-left relative z-20"
+    >
       <div
-        class="inline-flex items-center space-x-3 border-l-2 border-[#5C6B73] pl-4"
+        class="hero-pre-heading opacity-0 inline-flex items-center space-x-3 border-l-2 border-[#5C6B73] pl-4 translate-y-4"
       >
         <span
           class="text-[8px] font-space tracking-wider uppercase text-[#5C6B73]"
@@ -47,22 +49,31 @@
       </div>
 
       <h1
-        class="font-syncopate font-bold text-[2.75rem] leading-[0.9] sm:text-5xl md:text-6xl lg:text-7xl tracking-widest"
+        class="font-syncopate font-bold text-[2.75rem] leading-[0.9] sm:text-5xl md:text-6xl lg:text-7xl tracking-widest overflow-hidden"
       >
-        <span class="block text-[#F2F4F6]">PRECISIÓN</span>
-        <span class="block text-[#5C6B73]">QUIRÚRGICA</span>
-        <span class="block text-[#F2F4F6]">DE ÉLITE</span>
+        <span
+          class="hero-title-line block text-[#F2F4F6] translate-y-full opacity-0"
+          >PRECISIÓN</span
+        >
+        <span
+          class="hero-title-line block text-[#5C6B73] translate-y-full opacity-0"
+          >QUIRÚRGICA</span
+        >
+        <span
+          class="hero-title-line block text-[#F2F4F6] translate-y-full opacity-0"
+          >DE ÉLITE</span
+        >
       </h1>
 
       <p
-        class="text-[0.95rem] md:text-base text-[#5C6B73] max-w-md mx-auto lg:mx-0 font-manrope font-light leading-[1.8] tracking-wide border-l-2 border-[#5C6B73]/30 pl-5"
+        class="hero-paragraph opacity-0 translate-y-4 text-[0.95rem] md:text-base text-[#5C6B73] max-w-md mx-auto lg:mx-0 font-manrope font-light leading-[1.8] tracking-wide border-l-2 border-[#5C6B73]/30 pl-5"
       >
         Intervención robótica de mínima invasión. Diagnósticos asistidos por IA.
         Estándar internacional en medicina regenerativa.
       </p>
 
       <div
-        class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
+        class="hero-buttons opacity-0 translate-y-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
       >
         <a
           href="#contact"
@@ -83,7 +94,7 @@
       </div>
 
       <!-- Stats con diseño mejorado -->
-      <div class="pt-12 mt-12 relative">
+      <div class="hero-stats opacity-0 translate-y-4 pt-12 mt-12 relative">
         <!-- Decoración de línea técnica -->
         <div class="absolute top-0 left-0 w-24 h-[1px] bg-[#D4FF5F]/50"></div>
 
@@ -128,7 +139,9 @@
     </div>
 
     <!-- Right: Image Carousel -->
-    <div class="lg:w-1/2 mt-20 lg:mt-0 relative w-full">
+    <div
+      class="hero-image-wrap opacity-0 translate-x-8 lg:w-1/2 mt-20 lg:mt-0 relative w-full"
+    >
       <div class="relative z-10 w-full max-w-xl mx-auto">
         <!-- Swiper Carousel -->
         <div class="swiper hero-swiper clip-tech border border-[#5C6B73]/30">
@@ -263,8 +276,10 @@
   import "swiper/css";
   import "swiper/css/effect-fade";
   import "swiper/css/pagination";
+  import { animate, stagger, spring, scroll } from "motion";
 
   document.addEventListener("DOMContentLoaded", () => {
+    // Swiper initialization
     new Swiper(".hero-swiper", {
       modules: [EffectFade, Autoplay, Pagination],
       effect: "fade",
@@ -281,6 +296,56 @@
         el: ".swiper-pagination",
         clickable: true,
       },
+    });
+
+    // Hero Entrance Animations
+    const sequence = [
+      [
+        ".hero-bg-grid",
+        { opacity: 0.4 },
+        { duration: 1.5, easing: "ease-in-out" },
+      ],
+      [
+        ".hero-pre-heading",
+        { opacity: 1, y: 0 },
+        { duration: 0.6, easing: [0.22, 1, 0.36, 1] },
+      ],
+      [
+        ".hero-title-line",
+        { opacity: 1, y: 0 },
+        { duration: 0.8, delay: stagger(0.15), easing: [0.22, 1, 0.36, 1] },
+      ],
+      [
+        ".hero-paragraph",
+        { opacity: 1, y: 0 },
+        { duration: 0.6, easing: [0.22, 1, 0.36, 1], at: "-0.4" },
+      ],
+      [
+        ".hero-buttons",
+        { opacity: 1, y: 0 },
+        { duration: 0.6, easing: [0.22, 1, 0.36, 1], at: "-0.4" },
+      ],
+      [
+        ".hero-stats",
+        { opacity: 1, y: 0 },
+        { duration: 0.6, easing: [0.22, 1, 0.36, 1], at: "-0.4" },
+      ],
+      [
+        ".hero-image-wrap",
+        { opacity: 1, x: 0 },
+        { duration: 1, easing: "ease-out", at: "-0.8" },
+      ],
+    ];
+
+    animate(sequence as any);
+
+    // Parallax Effects on Scroll
+    scroll(animate(".hero-text-content", { y: [0, 100], opacity: [1, 0] }), {
+      offset: ["start start", "end start"],
+    });
+
+    scroll(animate(".hero-image-wrap", { y: [0, 150] }), {
+      offset: ["start start", "end start"],
     });
   });
 </script>

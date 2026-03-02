@@ -2,9 +2,13 @@
 
 ---
 
-<header class="fixed top-0 w-full z-[60] transition-all duration-300">
+<header
+  id="main-header"
+  class="fixed top-0 w-full z-[60] transition-all duration-300"
+>
   <div
-    class="glass-panel mx-auto max-w-7xl mt-6 mx-4 md:mx-auto border-x-0 border-t-0 border-b border-[#5C6B73]/20 px-8 py-4 flex justify-between items-center"
+    id="header-panel"
+    class="glass-panel mx-auto max-w-7xl mt-6 mx-4 md:mx-auto border-x-0 border-t-0 border-b border-[#5C6B73]/20 px-8 py-4 flex justify-between items-center transition-all duration-300"
   >
     <!-- Logo -->
     <a class="flex items-center group" href="#">
@@ -70,7 +74,31 @@
 <script>
   const btn = document.getElementById("mobile-menu-btn");
   const menu = document.getElementById("mobile-menu");
-  btn?.addEventListener("click", () => {
-    menu?.classList.toggle("hidden");
-  });
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
+
+  // Header Scroll Effect
+  const headerPanel = document.getElementById("header-panel");
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 50) {
+        headerPanel?.classList.replace("mt-6", "mt-2");
+        headerPanel?.classList.replace("py-4", "py-2");
+        headerPanel?.classList.replace("px-8", "px-6");
+        headerPanel?.classList.add("bg-[#121413]/80", "backdrop-blur-md");
+      } else {
+        headerPanel?.classList.replace("mt-2", "mt-6");
+        headerPanel?.classList.replace("py-2", "py-4");
+        headerPanel?.classList.replace("px-6", "px-8");
+        headerPanel?.classList.remove("bg-[#121413]/80", "backdrop-blur-md");
+      }
+    },
+    { passive: true },
+  );
 </script>

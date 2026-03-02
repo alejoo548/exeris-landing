@@ -3,14 +3,17 @@
 ---
 
 <!doctype html>
-<html class="scroll-smooth" lang="es">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>EXERIS | Alta Precisión Quirúrgica</title>
-    <meta name="description" content="Cirugía de precisión milimétrica con tecnología de vanguardia" />
+    <meta
+      name="description"
+      content="Cirugía de precisión milimétrica con tecnología de vanguardia"
+    />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -28,6 +31,15 @@
   </head>
   <body class="overflow-x-hidden">
     <slot />
+    <script>
+      import Lenis from "lenis";
+
+      // Initialize Lenis
+      const lenis = new Lenis({
+        autoRaf: true,
+      });
+      // Optionally sync with motion if needed, but autoRaf handles mostly fine.
+    </script>
   </body>
 </html>
 

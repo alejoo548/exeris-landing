@@ -2,54 +2,100 @@
 
 ---
 
-<section class="py-24 md:py-32 bg-[#121413] relative overflow-hidden">
+<section
+  id="doctor-profile"
+  class="py-24 md:py-32 bg-[#121413] relative overflow-hidden"
+>
   <div class="absolute inset-0 grid-precision opacity-20"></div>
-  
+
   <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10">
     <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
       <!-- Left: Doctor Image -->
       <div class="lg:w-5/12 relative group w-full max-w-md mx-auto lg:mx-0">
-        <div class="relative border border-[#5C6B73]/30">
-          <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#5C6B73]"></div>
-          <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#5C6B73]"></div>
-          
+        <div
+          class="doc-image-wrap opacity-0 scale-95 relative border border-[#5C6B73]/30 transition-transform duration-700"
+        >
+          <div
+            class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#5C6B73]"
+          >
+          </div>
+          <div
+            class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#5C6B73]"
+          >
+          </div>
+
           <div class="flex">
-            <div class="relative overflow-hidden clip-tech bg-[#0d0e0e] flex-grow">
-              <div class="absolute inset-0 z-20 bg-gradient-to-t from-[#121413] via-transparent to-transparent opacity-60"></div>
-              
+            <div
+              class="relative overflow-hidden clip-tech bg-[#0d0e0e] flex-grow"
+            >
+              <div
+                class="absolute inset-0 z-20 bg-gradient-to-t from-[#121413] via-transparent to-transparent opacity-60"
+              >
+              </div>
+
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qCmPuCLw1HmaEd9wTJvGsV_QZ7AmhBjPhyG7W017iM7YboBdZgGLqreZQOPNFHx4B1tkPUxhbXRLlyZtFb1Ww1T7pGxB43wX3mt8UK8s5P-vkgYQAehGv8xEs6ac5m-Kuz-VCksgYVXE8CA5LJhNJu2c4PykOOIN9HUhW-6PMWz3S5-W6tRvNYxsCeHwGY4k_zMcQnGlsZmVtHLyfU1l-83MeHoLLxfGus_92TNJ2VvUX6ihdiSDbdvMYObVbYWdy0nR6Wx8ej2O"
                 alt="Dr. Alejandro V."
                 class="w-full object-cover h-[420px] md:h-[480px] lg:h-[540px] opacity-90 group-hover:opacity-100 transition-opacity duration-700 grayscale contrast-125"
               />
-              
-              <div class="absolute top-4 left-4 z-20 bg-[#121413]/95 px-3 py-2 border-l-2 border-[#5C6B73]">
-                <p class="text-[8px] font-space text-[#F2F4F6] tracking-wider">ID: EX-290 // CMO</p>
+
+              <div
+                class="absolute top-4 left-4 z-20 bg-[#121413]/95 px-3 py-2 border-l-2 border-[#5C6B73]"
+              >
+                <p class="text-[8px] font-space text-[#F2F4F6] tracking-wider">
+                  ID: EX-290 // CMO
+                </p>
               </div>
-              
-              <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#121413] via-[#121413]/95 to-transparent">
-                <h3 class="text-xl md:text-2xl font-syncopate font-bold text-[#F2F4F6] uppercase tracking-wider">
+
+              <div
+                class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#121413] via-[#121413]/95 to-transparent"
+              >
+                <h3
+                  class="text-xl md:text-2xl font-syncopate font-bold text-[#F2F4F6] uppercase tracking-wider"
+                >
                   DR. ALEJANDRO V.
                 </h3>
-                <p class="text-[#5C6B73] text-[8px] tracking-[0.2em] uppercase mt-2 font-space">
+                <p
+                  class="text-[#5C6B73] text-[8px] tracking-[0.2em] uppercase mt-2 font-space"
+                >
                   CIRUJANO PRINCIPAL
                 </p>
               </div>
             </div>
-            
+
             <!-- Side stats -->
-            <div class="w-16 md:w-20 ml-2 flex flex-col justify-end gap-4 py-4 bg-[#0d0e0e] border-l border-[#5C6B73]/20">
+            <div
+              class="w-16 md:w-20 ml-2 flex flex-col justify-end gap-4 py-4 bg-[#0d0e0e] border-l border-[#5C6B73]/20"
+            >
               <div class="text-right px-2">
-                <p class="text-[7px] text-[#5C6B73] font-space uppercase mb-1">SUCCESS</p>
-                <p class="text-[11px] md:text-xs text-[#F2F4F6] font-syncopate font-bold">99.4%</p>
+                <p class="text-[7px] text-[#5C6B73] font-space uppercase mb-1">
+                  SUCCESS
+                </p>
+                <p
+                  class="text-[11px] md:text-xs text-[#F2F4F6] font-syncopate font-bold"
+                >
+                  99.4%
+                </p>
               </div>
               <div class="text-right px-2">
-                <p class="text-[7px] text-[#5C6B73] font-space uppercase mb-1">CASES</p>
-                <p class="text-[11px] md:text-xs text-[#F2F4F6] font-syncopate font-bold">2.5K+</p>
+                <p class="text-[7px] text-[#5C6B73] font-space uppercase mb-1">
+                  CASES
+                </p>
+                <p
+                  class="text-[11px] md:text-xs text-[#F2F4F6] font-syncopate font-bold"
+                >
+                  2.5K+
+                </p>
               </div>
               <div class="text-right px-2">
-                <p class="text-[7px] text-[#5C6B73] font-space uppercase mb-1">EXP</p>
-                <p class="text-[11px] md:text-xs text-[#F2F4F6] font-syncopate font-bold">15YRS</p>
+                <p class="text-[7px] text-[#5C6B73] font-space uppercase mb-1">
+                  EXP
+                </p>
+                <p
+                  class="text-[11px] md:text-xs text-[#F2F4F6] font-syncopate font-bold"
+                >
+                  15YRS
+                </p>
               </div>
               <div class="mt-4 flex flex-col gap-1 items-end px-2 opacity-40">
                 <div class="w-full h-[0.5px] bg-[#5C6B73]"></div>
@@ -63,42 +109,64 @@
 
       <!-- Right: Protocols -->
       <div class="lg:w-7/12">
-        <h2 class="text-[2rem] sm:text-3xl md:text-4xl lg:text-5xl font-syncopate font-bold text-[#F2F4F6] uppercase leading-tight mb-8 tracking-wider">
+        <h2
+          class="doc-text-block opacity-0 translate-y-8 text-[2rem] sm:text-3xl md:text-4xl lg:text-5xl font-syncopate font-bold text-[#F2F4F6] uppercase leading-tight mb-8 tracking-wider"
+        >
           PROTOCOLOS DE <br />
           <span class="text-[#5C6B73]">EXCELENCIA MÉDICA</span>
         </h2>
-        
-        <p class="text-[0.95rem] md:text-base text-[#5C6B73] font-light mb-10 leading-[1.8] font-manrope max-w-2xl">
+
+        <p
+          class="doc-text-block opacity-0 translate-y-8 text-[0.95rem] md:text-base text-[#5C6B73] font-light mb-10 leading-[1.8] font-manrope max-w-2xl"
+        >
           En EXERIS, fusionamos la intuición clínica con la precisión de la
           ingeniería biomédica. Nuestros especialistas operan bajo estrictos
           estándares internacionales, garantizando seguridad y eficacia en cada
           procedimiento.
         </p>
-        
+
         <ul class="space-y-5 mb-12 border-l-2 border-[#5C6B73]/20 pl-6">
-          <li class="flex items-start group">
-            <span class="w-1 h-1 bg-[#5C6B73] mr-4 mt-2 group-hover:bg-[#D4FF5F] transition-colors"></span>
-            <span class="text-[#5C6B73] font-manrope text-[0.9rem] group-hover:text-[#F2F4F6] transition-colors">
+          <li
+            class="doc-text-block opacity-0 translate-y-4 flex items-start group"
+          >
+            <span
+              class="w-1 h-1 bg-[#5C6B73] mr-4 mt-2 group-hover:bg-[#D4FF5F] transition-colors"
+            ></span>
+            <span
+              class="text-[#5C6B73] font-manrope text-[0.9rem] group-hover:text-[#F2F4F6] transition-colors"
+            >
               Certificación del Consejo Mexicano de Cirugía
             </span>
           </li>
-          <li class="flex items-start group">
-            <span class="w-1 h-1 bg-[#5C6B73] mr-4 mt-2 group-hover:bg-[#D4FF5F] transition-colors"></span>
-            <span class="text-[#5C6B73] font-manrope text-[0.9rem] group-hover:text-[#F2F4F6] transition-colors">
+          <li
+            class="doc-text-block opacity-0 translate-y-4 flex items-start group"
+          >
+            <span
+              class="w-1 h-1 bg-[#5C6B73] mr-4 mt-2 group-hover:bg-[#D4FF5F] transition-colors"
+            ></span>
+            <span
+              class="text-[#5C6B73] font-manrope text-[0.9rem] group-hover:text-[#F2F4F6] transition-colors"
+            >
               Infraestructura hospitalaria grado Premium
             </span>
           </li>
-          <li class="flex items-start group">
-            <span class="w-1 h-1 bg-[#5C6B73] mr-4 mt-2 group-hover:bg-[#D4FF5F] transition-colors"></span>
-            <span class="text-[#5C6B73] font-manrope text-[0.9rem] group-hover:text-[#F2F4F6] transition-colors">
+          <li
+            class="doc-text-block opacity-0 translate-y-4 flex items-start group"
+          >
+            <span
+              class="w-1 h-1 bg-[#5C6B73] mr-4 mt-2 group-hover:bg-[#D4FF5F] transition-colors"
+            ></span>
+            <span
+              class="text-[#5C6B73] font-manrope text-[0.9rem] group-hover:text-[#F2F4F6] transition-colors"
+            >
               Monitoreo biométrico post-operatorio 24/7
             </span>
           </li>
         </ul>
-        
+
         <a
           href="#"
-          class="inline-block border border-[#5C6B73]/40 text-[#F2F4F6] hover:bg-[#5C6B73]/10 hover:border-[#5C6B73] px-10 py-4 text-[9px] font-bold uppercase tracking-wider clip-tech transition-all font-manrope"
+          class="doc-text-block opacity-0 translate-y-4 inline-block border border-[#5C6B73]/40 text-[#F2F4F6] hover:bg-[#5C6B73]/10 hover:border-[#5C6B73] px-10 py-4 text-[9px] font-bold uppercase tracking-wider clip-tech transition-all font-manrope"
         >
           CREDENCIALES DEL EQUIPO
         </a>
@@ -106,3 +174,39 @@
     </div>
   </div>
 </section>
+
+<script>
+  import { animate, inView, stagger, scroll } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    inView(
+      "#doctor-profile",
+      () => {
+        // Image reveal
+        animate(
+          ".doc-image-wrap",
+          { opacity: 1, scale: 1 },
+          { duration: 1, easing: "ease-out" },
+        );
+
+        // Text stagger
+        animate(
+          ".doc-text-block",
+          { opacity: 1, y: 0 },
+          {
+            duration: 0.8,
+            delay: stagger(0.1, { start: 0.3 }),
+            easing: [0.22, 1, 0.36, 1],
+          },
+        );
+      },
+      { margin: "-100px" },
+    );
+
+    // Parallax effect on the image wrapper
+    scroll(animate(".doc-image-wrap", { y: [50, -50] }), {
+      target: document.querySelector("#doctor-profile") as HTMLElement,
+      offset: ["start end", "end start"],
+    });
+  });
+</script>
