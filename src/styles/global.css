@@ -13,13 +13,14 @@
 
 /* ─── Base ─── */
 html {
+  background-color: var(--color-grafito);
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
 }
 
 body {
-  background-color: var(--color-grafito);
+  background-color: transparent;
   color: var(--color-ceramica);
   font-family: "Manrope", sans-serif;
   position: relative;
